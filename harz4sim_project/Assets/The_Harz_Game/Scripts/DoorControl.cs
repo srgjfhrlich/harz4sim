@@ -8,10 +8,14 @@ public class DoorControl : MonoBehaviour
 
     Animator _doorAnim;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        _doorAnim.SetBool("isOpening", true);
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            _doorAnim.SetBool("isOpening", true);
+        }
     }
+
 
     private void OnTriggerExit(Collider other)
     {
