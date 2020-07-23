@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorController : MonoBehaviour
+public class DoorControl : MonoBehaviour
 {
+    // Start is called before the first frame update
 
     Animator _doorAnim;
 
@@ -16,7 +17,7 @@ public class DoorController : MonoBehaviour
     {
         _doorAnim.SetBool("isOpening", false);
     }
-    // Start is called before the first frame update
+
     void Start()
     {
         _doorAnim = this.transform.parent.GetComponent<Animator>();
