@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/The_Harz_Game/Scenes/kai.unity
+    guid: bad8338488504e9449bde5392fc2cdbc
+  - enabled: 1
+    path: Assets/The_Harz_Game/Scenes/MimonsHaus.unity
+    guid: 84eae2da07d61714396f059bf2c31603
   m_configObjects: {}

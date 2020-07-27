@@ -7,6 +7,8 @@ public class MimonDoorScript : MonoBehaviour
 {
     // Start is called before the first frame update
     Animator doorAnim;
+    
+    
 
     void Start()
     {
@@ -18,10 +20,20 @@ public class MimonDoorScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.E))
         {
             doorAnim.SetBool("PressedE", true);
-            SceneManager.LoadScene("MimonsHaus");
+            StartCoroutine(TimerRoutine());
+            
+
+                
+            
         }
     }
 
+     IEnumerator TimerRoutine()
+      {
+        
+          yield return new WaitForSeconds(0.75f);
+        SceneManager.LoadScene("MimonsHaus");
+    }
    
 
     private void OnTriggerExit(Collider other)
